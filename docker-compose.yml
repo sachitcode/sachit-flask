@@ -1,16 +1,16 @@
 version: '3'
 services:
-        web:
-                image: sachit_port_1
-                build: .
-                ports:
-                        - "8001:8080"
-                volumes:
-                        - persistent_volume:/app/volumes
+      web:
+              image: sachit_port_1
+              build: .
+              ports:
+                      - "8001:8080"
+              volumes:
+                      - persistent_volume:/app/volumes
 volumes:
-  persistent_volume:
-    driver: local
-    driver_opts:
-      o: bind
-      type: none
-      device: /home/ubuntu/sachit-flask/volumes
+persistent_volume:
+  driver: local
+  driver_opts:
+    o: bind
+    type: none
+    device: /home/ubuntu/sachit-flask/volumes
